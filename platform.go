@@ -135,7 +135,7 @@ func SupportedPlatforms(v string) []Platform {
 		{">= 1.8, < 1.9", Platforms_1_8},
 		{">= 1.9, < 1.10", Platforms_1_9},
 		{">=1.10, < 1.11", Platforms_1_10},
-		{">=1.11, < 1.12", Platforms_1_11},
+		{">=1.11, < 1.14", Platforms_1_11},
 	}
 
 	for _, p := range platforms {
