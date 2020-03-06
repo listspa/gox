@@ -97,7 +97,10 @@ var (
 	// no new platforms in 1.10
 	Platforms_1_10 = Platforms_1_9
 
-	PlatformsLatest = Platforms_1_10
+	Platforms_1_11 = append(Platforms_1_10, []Platform{
+		{"aix", "ppc64", true},
+	}...)
+	PlatformsLatest = Platforms_1_11
 )
 
 // SupportedPlatforms returns the full list of supported platforms for
@@ -132,6 +135,7 @@ func SupportedPlatforms(v string) []Platform {
 		{">= 1.8, < 1.9", Platforms_1_8},
 		{">= 1.9, < 1.10", Platforms_1_9},
 		{">=1.10, < 1.11", Platforms_1_10},
+		{">=1.11, < 1.12", Platforms_1_11},
 	}
 
 	for _, p := range platforms {
